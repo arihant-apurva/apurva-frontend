@@ -1,0 +1,122 @@
+.content{
+    overflow: auto;
+    overflow-x: hidden;
+}
+/* $theme-color: #007bff; */
+.MuiTablePagination-input{
+    margin-top: -1rem;
+}
+.MuiTablePagination-actions{
+    margin-top: -1rem;
+
+}
+
+/* table css */
+.table-container {
+    font-size: 0.5rem; /* Smaller text size */
+}
+
+
+.table-container td {
+    padding: 8px 12px; /* Reduce padding for compact look */
+    text-align: left; /* Align text to the left */
+}
+
+.table-container th {
+    font-weight: bold;
+    font-size: 0.5rem; /* Slightly larger heading text */
+    text-transform: uppercase; /* Optional: Uppercase for headings */
+    text-align: center;
+        vertical-align: top; /* Align headers to the top */
+        font-weight: bold;
+        font-size: 0.6rem; /* Adjust as needed */
+        text-transform: uppercase; /* Optional: Uppercase for headings */
+        padding: 8px 12px; /* Ensure padding is consistent */
+}
+
+.table-container td {
+    font-size: 0.4rem; /* Compact data text size */
+    line-height: 1.0; /* Adjust line height */
+}
+
+.table-container img {
+    max-height: 20px; /* Limit image size */
+    max-width: 40px;
+}
+
+.w-75 {
+    width: 40% !important;
+}
+
+/* ghgfffffffffffffffffffff */
+
+/* Base styles for table */
+.table-responsive-container {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    margin-bottom: 1rem;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Responsive table headers */
+.header-with-search {
+    display: flex;
+    flex-direction: column;
+    min-height: 4rem;
+}
+
+.search-input {
+    margin-top: 0.5rem;
+}
+
+/* Table cells and headers padding */
+.table-container th,
+.table-container td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .header-with-search {
+        flex-direction: row;
+        justify-content: space-between; /* Keep the label and input aligned */
+        min-height: auto;
+    }
+
+    .search-input {
+        margin: 0;
+        width: 60%; /* Shrink input width for smaller screens */
+    }
+
+    .table-container th,
+    .table-container td {
+        font-size: 14px; /* Reduce font size */
+        padding: 6px 8px; /* Reduce padding */
+    }
+}
+
+/* Stack table rows on very small screens */
+@media (max-width: 480px) {
+    .table-container {
+        display: block;
+    }
+
+    .table-container th,
+    .table-container td {
+        display: block;
+        width: 100%; /* Full width for each cell */
+        text-align: left;
+    }
+
+    .table-container td {
+        padding: 4px; /* Smaller padding */
+    }
+
+    .table-container th {
+        font-weight: bold;
+    }
+}

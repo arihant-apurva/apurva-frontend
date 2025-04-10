@@ -1,0 +1,25 @@
+.w-75  {
+    margin-top: 20px ; 
+    padding: 4px;
+    height: 40px;
+    width: 70px;
+
+}
+
+.sorting_button {
+
+    display: flex;
+    align-items: center;
+    /* margin-left: 10px; */
+}
+.icon-spacing {
+    margin-left: 30px; /* Adjust this value to increase the space */
+}
+.status_icon{
+     font-size: 7px !important; 
+    position: relative; 
+    top: 7px; 
+    height: 34px; 
+    width: 70px;
+}
+

@@ -1,0 +1,19 @@
+.container1{
+    background-color: #c8c8ca;
+    width: 1020px;
+}
+.form-select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-select:focus {
+    border-color: #007bff;
+  }
