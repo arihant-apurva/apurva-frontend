@@ -86,7 +86,7 @@ const List = () => {
             setLoading(true);
             try {
                 const response = await fetch(
-                    `http://localhost:5000/api/content-type/users?page=${page + 1}&limit=${rowsPerPage}`,
+                    `https://apurva-backend-repo.onrender.com/api/content-type/users?page=${page + 1}&limit=${rowsPerPage}`,
                     {
                         method: 'GET',
                         headers: {

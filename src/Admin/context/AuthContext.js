@@ -8,11 +8,13 @@ export const AuthProvider = ({ children }) => {
 
     const checkAuth = async () => {
         try {
-          const response = await fetch("http://localhost:5000/api/auth/remember", {
+          const response = await fetch("https://apurva-backend-repo.onrender.com/api/auth/remember", {
             method: "GET",
             credentials: "include", // Allows sending cookies
           });
           const data = await response.json();
+          console.log(data);
+          
           if (response.ok) {            
             setLoggedIn(data.loggedIn);
           } else {

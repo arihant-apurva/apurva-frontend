@@ -41,7 +41,7 @@ export default function NewsForm() {
   const [contentTypes, setContentTypes] = useState([]);
   const [subcategoryOptions, setSubcategoryOptions] = useState([]);
   const [errors, setErrors] = useState();
-  const fetchData = usePost("http://localhost:5000/api/news/add");
+  const fetchData = usePost("https://apurva-backend-repo.onrender.com/api/news/add");
 
   const validationSchema = Yup.object({
     type: Yup.string().required('*Type is requied'),
@@ -89,7 +89,7 @@ export default function NewsForm() {
   useEffect(() => {
     const fetchContentTypes = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/category-type/fetchAll');
+        const response = await fetch('https://apurva-backend-repo.onrender.com/api/category-type/fetchAll');
         if (response.ok) {
           const data = await response.json();
           setContentTypes(data || []);
@@ -206,7 +206,7 @@ export default function NewsForm() {
       }
 
       if (name === 'type') {
-        const response = await fetch(`http://localhost:5000/api/category-type/subcategory?category=${value}`, {
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/subcategory?category=${value}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

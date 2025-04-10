@@ -23,7 +23,7 @@ const Header = function () {
 
     const logoutHandler = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/auth/logout", {
+            const response = await fetch("https://apurva-backend-repo.onrender.com/api/auth/logout", {
                 method: "POST",
                 credentials: "include", // Allows sending cookies
             });
@@ -32,7 +32,7 @@ const Header = function () {
                 // Handle successful logout (e.g., redirect to login page)
                 setLoggedIn(false);
                 Notification.success(data.message);
-                navigate("/");
+                navigate("/admin");
             } else {
                 // Handle error
                 Notification.error(data.message);

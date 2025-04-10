@@ -146,7 +146,7 @@ const NewsList = () => {
     // }, [sortOrder]);
 
     let activeSort={}
-    const BASE_URL = `http://localhost:5000/api/search/news?page=${page + 1}&limit=${rowsPerPage}&sort=${JSON.stringify(activeSort)}&filters=${JSON.stringify(filters)}`
+    const BASE_URL = `https://apurva-backend-repo.onrender.com/api/search/news?page=${page + 1}&limit=${rowsPerPage}&sort=${JSON.stringify(activeSort)}&filters=${JSON.stringify(filters)}`
     
     const { data, loading, error } = useFetch(BASE_URL)
     useEffect(() => {
