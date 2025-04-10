@@ -98,7 +98,7 @@ const ReadyQueueList = () => {
             return; // Exit if the user cancels
         }
         try {
-            const response = await fetch(`http://localhost:5000/api/news/changeStatus/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/changeStatus/${id}`, {
                 method: "PUT", // Use DELETE instead of GET
             });
 

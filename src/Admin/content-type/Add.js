@@ -120,7 +120,7 @@ const Add = () => {
         formData.append("contentTypeImage", ListItem.contentTypeImage);
 
         try {
-            const response = await fetch("http://localhost:5000/api/content-type/add", {
+            const response = await fetch("https://apurva-backend-repo.onrender.com/api/content-type/add", {
                 method: "POST",
                 body: formData, // Send FormData
             });

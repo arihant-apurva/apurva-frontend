@@ -87,7 +87,7 @@ const NewsList = () => {
             setLoading(true);
             try {
                 const response = await fetch(
-                    `http://localhost:5000/api/videos/users?page=${page + 1}&limit=${rowsPerPage}`,
+                    `https://apurva-backend-repo.onrender.com/api/videos/users?page=${page + 1}&limit=${rowsPerPage}`,
                     {
                         method: 'GET',
                         headers: {
@@ -125,7 +125,7 @@ const NewsList = () => {
 
     const deleteHandler = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/videos/delete/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/videos/delete/${id}`, {
                 method: "GET",
             })
 
@@ -352,7 +352,7 @@ const NewsList = () => {
                                                 {entry.videoLink || entry.filePath ? (
                                                     <video width="100" height="70" controls>
                                                         <source
-                                                            src={entry.videoLink || `http://localhost:5000/uploads/videos/${entry.fileName}`}
+                                                            src={entry.videoLink || `https://apurva-backend-repo.onrender.com/uploads/videos/${entry.fileName}`}
                                                             type="video/webm"
                                                         />
                                                         Your browser does not support the video tag.
@@ -365,7 +365,7 @@ const NewsList = () => {
                                                 {entry.videoLink || entry.filePath ? (
                                                     <video width="100" height="70" controls>
                                                         <source
-                                                            src={entry.videoLink || `http://localhost:5000/${entry.filePath}`}
+                                                            src={entry.videoLink || `https://apurva-backend-repo.onrender.com/${entry.filePath}`}
                                                             type="video/webm"
                                                         />
                                                         Your browser does not support the video tag.

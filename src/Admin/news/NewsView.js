@@ -17,7 +17,7 @@ export default function NewsView() {
   useEffect(() => {
     const fetchSingleItem = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/news/${languageCollection}/view/${id}`,
+        `https://apurva-backend-repo.onrender.com/api/news/${languageCollection}/view/${id}`,
         {
           method: "GET",
           headers: {
@@ -40,7 +40,7 @@ export default function NewsView() {
   }, [document.news])
   const fetchOriginalItem = async () => {
     const response = await fetch(
-      `http://localhost:5000/api/news/news/view/${document.news}`,
+      `https://apurva-backend-repo.onrender.com/api/news/news/view/${document.news}`,
       {
         method: "GET",
         headers: {

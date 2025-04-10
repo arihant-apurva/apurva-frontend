@@ -32,7 +32,7 @@ export default function CategoryUpdate() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/category-type/view/${id}`);
+                const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/view/${id}`);
                 const data = await response.json();
                 if (response.ok) {
                     setListItem({
@@ -98,7 +98,7 @@ export default function CategoryUpdate() {
     // Submit handler for updating the category
     const submitHandler = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/category-type/update/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/update/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(ListItem),

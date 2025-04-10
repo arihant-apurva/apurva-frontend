@@ -86,7 +86,7 @@ export default function NewsUpdate() {
   useEffect(() => {
     async function fetchNewsData() {
       try {
-        const response = await fetch(`http://localhost:5000/api/news/news/view/${id}`);
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/news/view/${id}`);
         if (response.ok) {
           const data = await response.json();
           // console.log(data);
@@ -102,7 +102,7 @@ export default function NewsUpdate() {
     fetchNewsData();
     const fetchContentTypes = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/category-type/fetchAll');
+        const response = await fetch('https://apurva-backend-repo.onrender.com/api/category-type/fetchAll');
         if (response.ok) {
           const data = await response.json();
           setContentTypes(data || []);
@@ -120,7 +120,7 @@ export default function NewsUpdate() {
   useEffect(() => {
     async function fetchSubCategory() {
       try {
-        const response = await fetch(`http://localhost:5000/api/category-type/subcategory?category=${formData.type}`, {
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/subcategory?category=${formData.type}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ export default function NewsUpdate() {
   //function to get the file url to get the image preview
   const handleFetchFile = async () => {
     if (formData.file) {
-      const response = await fetch(`http://localhost:5000/api/news/file/${formData.file.filename}`);
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/file/${formData.file.filename}`);
       const blob = await response.blob();
       setFileUrl(URL.createObjectURL(blob));
     }
@@ -257,7 +257,7 @@ export default function NewsUpdate() {
       }
 
       if (name === 'type') {
-        const response = await fetch(`http://localhost:5000/api/category-type/subcategory?category=${value}`, {
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/subcategory?category=${value}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -303,7 +303,7 @@ export default function NewsUpdate() {
 
 
     try {
-      const response = await fetch(`http://localhost:5000/api/news/update-all/${id}`, {
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/update-all/${id}`, {
         method: "PUT",
         body: newsData, // Send FormData
       });

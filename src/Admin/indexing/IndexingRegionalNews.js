@@ -142,7 +142,7 @@ const IndexingRegionalNews = () => {
         const fetchData = async (collectionName, filters = {}, page = 1, limit = 10, sort = {}) => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/api/news-indexing/regional-news/list/${collectionName}?page=${page + 1}&limit=${limit}&sort=${JSON.stringify(sort)}&filters=${JSON.stringify(filters)}`,
+                    `https://apurva-backend-repo.onrender.com/api/news-indexing/regional-news/list/${collectionName}?page=${page + 1}&limit=${limit}&sort=${JSON.stringify(sort)}&filters=${JSON.stringify(filters)}`,
                     {
                         method: 'GET',
                         headers: {
@@ -212,7 +212,7 @@ const IndexingRegionalNews = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/api/regional-news/delete/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/regional-news/delete/${id}`, {
                 method: "GET",
             });
 

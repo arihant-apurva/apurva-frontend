@@ -12,7 +12,7 @@ export const ListProvider = ({ children }) => {
             // console.log(sort);
             
             const response = await fetch(
-                `http://localhost:5000/api/search/${collectionName}?page=${page+1}&limit=${limit}&sort=${JSON.stringify(sort)}&filters=${JSON.stringify(filters)}`,
+                `https://apurva-backend-repo.onrender.com/api/search/${collectionName}?page=${page+1}&limit=${limit}&sort=${JSON.stringify(sort)}&filters=${JSON.stringify(filters)}`,
                 {
                     method: 'GET',
                     headers: {

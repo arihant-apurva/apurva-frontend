@@ -88,7 +88,7 @@ const NewsListBengali = () => {
             return; // Exit if the user cancels
         }
         try {
-            const response = await fetch(`http://localhost:5000/api/news/delete/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/delete/${id}`, {
                 method: "DELETE", // Use DELETE instead of GET
             });
             
@@ -146,7 +146,7 @@ const NewsListBengali = () => {
     // }, [sortOrder]);
 
     let activeSort={}
-    const BASE_URL = `http://localhost:5000/api/search/news_bn?page=${page + 1}&limit=${rowsPerPage}&sort=${JSON.stringify(activeSort)}&filters=${JSON.stringify(filters)}`
+    const BASE_URL = `https://apurva-backend-repo.onrender.com/api/search/news_bn?page=${page + 1}&limit=${rowsPerPage}&sort=${JSON.stringify(activeSort)}&filters=${JSON.stringify(filters)}`
     
     const { data, loading, error } = useFetch(BASE_URL)
     useEffect(() => {
@@ -205,7 +205,7 @@ const NewsListBengali = () => {
     //request for approval button logic
     const sendApprovalRequest = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/news/update/sensorship/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/update/sensorship/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
             });

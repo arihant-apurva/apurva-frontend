@@ -98,7 +98,7 @@ const SensorshipList = () => {
             return; // Exit if the user cancels
         }
         try {
-            const response = await fetch(`http://localhost:5000/api/news/delete/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/delete/${id}`, {
                 method: "DELETE", // Use DELETE instead of GET
             });
 

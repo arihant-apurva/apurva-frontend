@@ -39,7 +39,7 @@ function Updatevideo() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/videos/view/${id}`, {
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/videos/view/${id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function Updatevideo() {
         } else if (data.filePath) {
           // Handle local file
           setUploadMethod("local");
-          const previewUrl = `http://localhost:5000/${data.filePath.replace(/\\/g, "/")}`;
+          const previewUrl = `https://apurva-backend-repo.onrender.com/${data.filePath.replace(/\\/g, "/")}`;
           setVideoPreview(previewUrl);
           setFileName(data.fileName);
           setFilePath(data.filePath);
@@ -113,7 +113,7 @@ function Updatevideo() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/videos/update/${id}`, {
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/videos/update/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ videoLink, title, description, status: status === 'active', displayAt }),
@@ -153,7 +153,7 @@ function Updatevideo() {
     }
     
     try {
-      const response = await fetch(`http://localhost:5000/api/videos/update/${id}`, {
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/videos/update/${id}`, {
         method: 'PUT',
         body: formData,
         // body: JSON.stringify({  title, description, status: status === 'active', displayAt }),

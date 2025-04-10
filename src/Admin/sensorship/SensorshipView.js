@@ -27,7 +27,7 @@ export default function SensorshipView() {
   useEffect(() => {
     const fetchSingleItem = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/news/view/${pathAfterView}`,
+        `https://apurva-backend-repo.onrender.com/api/news/view/${pathAfterView}`,
         {
           method: "GET",
           headers: {
@@ -51,7 +51,7 @@ export default function SensorshipView() {
     setIsReviewing(true);
     // Logic to update the suggestion (API request, etc.)
     const response = await fetch(
-      `http://localhost:5000/api/news/suggest/${document._id}`,
+      `https://apurva-backend-repo.onrender.com/api/news/suggest/${document._id}`,
       {
         method: "PUT",
         headers: {
@@ -78,7 +78,7 @@ export default function SensorshipView() {
     }
   
     const response = await fetch(
-      `http://localhost:5000/api/news/approve/${document._id}`,
+      `https://apurva-backend-repo.onrender.com/api/news/approve/${document._id}`,
       {
         method: "PUT",
         headers: {
@@ -107,7 +107,7 @@ export default function SensorshipView() {
     }
   
     const response = await fetch(
-      `http://localhost:5000/api/news/reject/${document._id}`,
+      `https://apurva-backend-repo.onrender.com/api/news/reject/${document._id}`,
       {
         method: "PUT",
         headers: {

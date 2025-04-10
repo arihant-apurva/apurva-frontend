@@ -28,7 +28,7 @@ export default function SensorshipRegionalView() {
   useEffect(() => {
     const fetchSingleItem = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/regional-news/view/${pathAfterView}`,
+        `https://apurva-backend-repo.onrender.com/api/regional-news/view/${pathAfterView}`,
         {
           method: "GET",
           headers: {
@@ -52,7 +52,7 @@ export default function SensorshipRegionalView() {
     setIsReviewing(true);
     // Logic to update the suggestion (API request, etc.)
     const response = await fetch(
-      `http://localhost:5000/api/regional-news/suggest/${document._id}`,
+      `https://apurva-backend-repo.onrender.com/api/regional-news/suggest/${document._id}`,
       {
         method: "PUT",
         headers: {
@@ -79,7 +79,7 @@ export default function SensorshipRegionalView() {
     }
 
     const response = await fetch(
-      `http://localhost:5000/api/regional-news/approve/${document._id}`,
+      `https://apurva-backend-repo.onrender.com/api/regional-news/approve/${document._id}`,
       {
         method: "PUT",
         headers: {
@@ -108,7 +108,7 @@ export default function SensorshipRegionalView() {
     }
 
     const response = await fetch(
-      `http://localhost:5000/api/regional-news/reject/${document._id}`,
+      `https://apurva-backend-repo.onrender.com/api/regional-news/reject/${document._id}`,
       {
         method: "PUT",
         headers: {

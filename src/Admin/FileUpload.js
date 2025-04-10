@@ -60,7 +60,7 @@
 //     formData.append('filedata', selectedFile);
 
 //     try {
-//       const response = await fetch('http://localhost:5000/upload', {  // Ensure URL matches your server endpoint
+//       const response = await fetch('https://apurva-backend-repo.onrender.com/upload', {  // Ensure URL matches your server endpoint
 //         method: 'POST',
 //         body: formData,
 //       });

@@ -131,7 +131,7 @@ const RegionAdd = () => {
 
     try {
       // await validationSchema.validate(formData, { abortEarly: false });
-      const response = await fetch("http://localhost:5000/api/regional-news/add", {
+      const response = await fetch("https://apurva-backend-repo.onrender.com/api/regional-news/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

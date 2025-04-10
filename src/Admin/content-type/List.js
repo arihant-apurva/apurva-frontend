@@ -117,7 +117,7 @@ const List = () => {
     //delete handler 
     const deleteHandler = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/content-type/delete/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/content-type/delete/${id}`, {
                 method: "GET",
             })
 

@@ -185,7 +185,7 @@ const NewsList = () => {
         }
       
         try {
-          const response = await fetch(`http://localhost:5000/api/regional-news/delete/${id}`, {
+          const response = await fetch(`https://apurva-backend-repo.onrender.com/api/regional-news/delete/${id}`, {
             method: "GET",
           });
       
@@ -204,7 +204,7 @@ const NewsList = () => {
      //request for approval button logic
     const sendApprovalRequest = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/regional-news/update/sensorship/${id}`, {
+            const response = await fetch(`https://apurva-backend-repo.onrender.com/api/regional-news/update/sensorship/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
             });

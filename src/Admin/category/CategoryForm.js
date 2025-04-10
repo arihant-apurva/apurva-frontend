@@ -72,7 +72,7 @@ export default function CategoryForm() {
         const fetchAllContentType = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/api/content-type/fetchAll`,
+                    `https://apurva-backend-repo.onrender.com/api/content-type/fetchAll`,
                     {
                         method: 'GET',
                         headers: {
@@ -210,7 +210,7 @@ export default function CategoryForm() {
     //submit handler
     const submitHandler = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/category-type/add", {
+            const response = await fetch("https://apurva-backend-repo.onrender.com/api/category-type/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

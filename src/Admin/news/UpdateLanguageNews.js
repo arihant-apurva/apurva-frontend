@@ -76,7 +76,7 @@ export default function UpdateLanguageNews() {
   useEffect(() => {
     async function fetchNewsData() {
       try {
-        const response = await fetch(`http://localhost:5000/api/news/${target_language}/view/${id}`);
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/${target_language}/view/${id}`);
         if (response.ok) {
           const data = await response.json();
           // console.log(data);
@@ -95,7 +95,7 @@ export default function UpdateLanguageNews() {
     fetchNewsData();
     const fetchContentTypes = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/category-type/fetchAll');
+        const response = await fetch('https://apurva-backend-repo.onrender.com/api/category-type/fetchAll');
         if (response.ok) {
           const data = await response.json();
           setContentTypes(data || []);
@@ -113,7 +113,7 @@ export default function UpdateLanguageNews() {
   useEffect(() => {
     async function fetchSubCategory() {
       try {
-        const response = await fetch(`http://localhost:5000/api/category-type/subcategory?category=${formData.type}`, {
+        const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/subcategory?category=${formData.type}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ export default function UpdateLanguageNews() {
     }
 
     if (name === 'type') {
-      const response = await fetch(`http://localhost:5000/api/category-type/subcategory?category=${value}`, {
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/category-type/subcategory?category=${value}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -213,7 +213,7 @@ export default function UpdateLanguageNews() {
     newsData.append("DisplayTime", formData.DisplayTime);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/news/update-one/${target_language}/${id}`, {
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/news/update-one/${target_language}/${id}`, {
         method: "PUT",
         body: newsData, // Send FormData
       });

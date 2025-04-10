@@ -107,7 +107,7 @@ const RegionUpdate = () => {
     }
   };
   
-    const {data, loading, error} =useFetch(`http://localhost:5000/api/regional-news/view/${id}`);
+    const {data, loading, error} =useFetch(`https://apurva-backend-repo.onrender.com/api/regional-news/view/${id}`);
     
   useEffect(() => {
     if (!loading && data) {
@@ -135,7 +135,7 @@ const RegionUpdate = () => {
 
     try {
       // await validationSchema.validate(formData, { abortEarly: false });
-      const response = await fetch(`http://localhost:5000/api/regional-news/update/${id}`, {
+      const response = await fetch(`https://apurva-backend-repo.onrender.com/api/regional-news/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
